@@ -1,6 +1,6 @@
 # nuxt-ts-template
 
-> My groovy Nuxt.js project
+> Nuxt.js v2.6.3~
 
 ## Build Setup
 

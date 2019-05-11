@@ -13,7 +13,7 @@ import { Vue } from 'vue-property-decorator'
 export default class Logo extends Vue {}
 </script>
 
-<style>
+<style scoped lang="scss">
 .VueToNuxtLogo {
 	display: inline-block;
 	animation: turn 2s linear forwards 1s;
