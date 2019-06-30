@@ -1,9 +1,9 @@
+// import NuxtConfiguration from '@nuxt/config'
 import NuxtConfiguration from '@nuxt/config'
 
 const config: NuxtConfiguration = {
 	srcDir: 'src/',
 	mode: 'universal',
-
 	/*
 	 ** Headers of the page
 	 */
@@ -16,11 +16,6 @@ const config: NuxtConfiguration = {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{
-				rel: 'stylesheet',
-				href:
-					'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-			}
 		]
 	},
 
@@ -45,15 +40,14 @@ const config: NuxtConfiguration = {
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
-		'@nuxtjs/pwa'
+		'@nuxtjs/pwa',
+		'@nuxtjs/eslint-module'
 	],
 	/*
 	 ** Axios module configuration
+	 ** See https://axios.nuxtjs.org/options
 	 */
-	axios: {
-		// See https://github.com/nuxt-community/axios-module#options
-	},
-
+	axios: {},
 	/*
 	 ** Build configuration
 	 */
@@ -68,10 +62,9 @@ const config: NuxtConfiguration = {
 				}
 			}
 		},
-		// build 糞重い?
 		extend(config, ctx) {
 			if (ctx.isDev && ctx.isClient) {
-				if (!config.module) return // undefinedの場合、pushせずにreturnするように追加
+				if (!config.module) return
 				config.module.rules.push({
 					enforce: 'pre',
 					test: /\.(js|vue)$/,
