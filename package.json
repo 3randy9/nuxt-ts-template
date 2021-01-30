@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "5.5.4",
-    "@nuxtjs/pwa": "3.0.0-beta.16",
+    "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.8.1",
     "nuxt-property-decorator": "2.3.0",
     "ts-node": "8.3.0",
